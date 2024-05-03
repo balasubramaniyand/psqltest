@@ -1,0 +1,25 @@
+AbstractAutowireCapableBeanFactory.java:440)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	... 44 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: permission denied for schema public
+  Position: 14
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:333)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:319)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:295)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:290)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.sonar.server.platform.db.migration.history.MigrationHistoryTableImpl.execute(MigrationHistoryTableImpl.java:71)
+	at org.sonar.server.platform.db.migration.history.MigrationHistoryTableImpl.createTable(MigrationHistoryTableImpl.java:59)
+	at org.sonar.server.platform.db.migration.history.MigrationHistoryTableImpl.start(MigrationHistoryTableImpl.java:45)
+	... 48 common frames omitted
+2024.05.03 11:30:01 INFO  web[][c.z.h.HikariDataSource] HikariPool-1 - Shutdown initiated...
+2024.05.03 11:30:01 INFO  web[][c.z.h.HikariDataSource] HikariPool-1 - Shutdown completed.
+2024.05.03 11:30:01 INFO  web[][o.s.s.a.EmbeddedTomcat] HTTP connector enabled on port 9000
+2024.05.03 11:30:01 INFO  web[][o.s.p.ProcessEntryPoint] Hard stopping process
