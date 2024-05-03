@@ -1,27 +1,16 @@
+balasubramaniyan.d@testgit:/opt/sonar/bin/linux-x86-64$ sudo -u postgres psql
 psql (16.2 (Ubuntu 16.2-1.pgdg22.04+1))
 Type "help" for help.
 
-postgres=# \du
-                             List of roles
- Role name |                         Attributes                         
------------+------------------------------------------------------------
- postgres  | Superuser, Create role, Create DB, Replication, Bypass RLS
- sonar     | 
- sonaruser | 
+postgres=# \l
+                                                       List of databases
+   Name    |  Owner   | Encoding | Locale Provider |   Collate   |    Ctype    | ICU Locale | ICU Rules |   Access privileges   
+-----------+----------+----------+-----------------+-------------+-------------+------------+-----------+-----------------------
+ postgres  | postgres | UTF8     | libc            | en_US.UTF-8 | en_US.UTF-8 |            |           | 
+ template0 | postgres | UTF8     | libc            | en_US.UTF-8 | en_US.UTF-8 |            |           | =c/postgres          +
+           |          |          |                 |             |             |            |           | postgres=CTc/postgres
+ template1 | postgres | UTF8     | libc            | en_US.UTF-8 | en_US.UTF-8 |            |           | =c/postgres          +
+           |          |          |                 |             |             |            |           | postgres=CTc/postgres
+(3 rows)
 
-postgres=# DROP sonar;
-ERROR:  syntax error at or near "sonar"
-LINE 1: DROP sonar;
-             ^
-postgres=# DROP user sonar;
-ERROR:  role "sonar" cannot be dropped because some objects depend on it
-DETAIL:  privileges for database sonar
-postgres=# delete database sonar;
-ERROR:  syntax error at or near "database"
-LINE 1: delete database sonar;
-               ^
-postgres=# delete databases sonar;
-ERROR:  syntax error at or near "databases"
-LINE 1: delete databases sonar;
-               ^
 postgres=# 
