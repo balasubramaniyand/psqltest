@@ -1,0 +1,171 @@
+postgres=# \du
+                             List of roles
+ Role name |                         Attributes                         
+-----------+------------------------------------------------------------
+ postgres  | Superuser, Create role, Create DB, Replication, Bypass RLS
+ sonaruser | 
+
+postgres=# 
+\conninfo
+                                            List of databases
+ Name | Owner | Encoding | Locale Provider | Collate | Ctype | ICU Locale | ICU Rules | Access privileges 
+------+-------+----------+-----------------+---------+-------+------------+-----------+-------------------
+(0 rows)
+
+\l: extra argument "of" ignored
+\l: extra argument "databases" ignored
+\l: extra argument "Name" ignored
+\l: extra argument "|" ignored
+\l: extra argument "Owner" ignored
+\l: extra argument "|" ignored
+\l: extra argument "Encoding" ignored
+\l: extra argument "|" ignored
+\l: extra argument "Locale" ignored
+\l: extra argument "Provider" ignored
+\l: extra argument "|" ignored
+\l: extra argument "Collate" ignored
+\l: extra argument "|" ignored
+\l: extra argument "Ctype" ignored
+\l: extra argument "|" ignored
+\l: extra argument "ICU" ignored
+\l: extra argument "Locale" ignored
+\l: extra argument "|" ignored
+\l: extra argument "ICU" ignored
+\l: extra argument "Rules" ignored
+\l: extra argument "|" ignored
+\l: extra argument "Access" ignored
+\l: extra argument "privileges" ignored
+\l: extra argument "-----------+----------+----------+-----------------+-------------+-------------+------------+-----------+------------------------" ignored
+\l: extra argument "postgres" ignored
+\l: extra argument "|" ignored
+\l: extra argument "postgres" ignored
+\l: extra argument "|" ignored
+\l: extra argument "UTF8" ignored
+\l: extra argument "|" ignored
+\l: extra argument "libc" ignored
+\l: extra argument "|" ignored
+\l: extra argument "en_US.UTF-8" ignored
+\l: extra argument "|" ignored
+\l: extra argument "en_US.UTF-8" ignored
+\l: extra argument "|" ignored
+\l: extra argument "|" ignored
+\l: extra argument "|" ignored
+\l: extra argument "sonarqube" ignored
+\l: extra argument "|" ignored
+\l: extra argument "postgres" ignored
+\l: extra argument "|" ignored
+\l: extra argument "UTF8" ignored
+\l: extra argument "|" ignored
+\l: extra argument "libc" ignored
+\l: extra argument "|" ignored
+\l: extra argument "en_US.UTF-8" ignored
+\l: extra argument "|" ignored
+\l: extra argument "en_US.UTF-8" ignored
+\l: extra argument "|" ignored
+\l: extra argument "|" ignored
+\l: extra argument "|" ignored
+\l: extra argument "=Tc/postgres" ignored
+\l: extra argument "+" ignored
+\l: extra argument "|" ignored
+\l: extra argument "|" ignored
+\l: extra argument "|" ignored
+\l: extra argument "|" ignored
+\l: extra argument "|" ignored
+\l: extra argument "|" ignored
+\l: extra argument "|" ignored
+\l: extra argument "|" ignored
+\l: extra argument "postgres=CTc/postgres" ignored
+\l: extra argument "+" ignored
+\l: extra argument "|" ignored
+\l: extra argument "|" ignored
+\l: extra argument "|" ignored
+\l: extra argument "|" ignored
+\l: extra argument "|" ignored
+\l: extra argument "|" ignored
+\l: extra argument "|" ignored
+\l: extra argument "|" ignored
+\l: extra argument "sonaruser=CTc/postgres" ignored
+\l: extra argument "template0" ignored
+\l: extra argument "|" ignored
+\l: extra argument "postgres" ignored
+\l: extra argument "|" ignored
+\l: extra argument "UTF8" ignored
+\l: extra argument "|" ignored
+\l: extra argument "libc" ignored
+\l: extra argument "|" ignored
+\l: extra argument "en_US.UTF-8" ignored
+\l: extra argument "|" ignored
+\l: extra argument "en_US.UTF-8" ignored
+\l: extra argument "|" ignored
+\l: extra argument "|" ignored
+\l: extra argument "|" ignored
+\l: extra argument "=c/postgres" ignored
+\l: extra argument "+" ignored
+\l: extra argument "|" ignored
+\l: extra argument "|" ignored
+\l: extra argument "|" ignored
+\l: extra argument "|" ignored
+\l: extra argument "|" ignored
+\l: extra argument "|" ignored
+\l: extra argument "|" ignored
+\l: extra argument "|" ignored
+\l: extra argument "postgres=CTc/postgres" ignored
+\l: extra argument "template1" ignored
+\l: extra argument "|" ignored
+\l: extra argument "postgres" ignored
+\l: extra argument "|" ignored
+\l: extra argument "UTF8" ignored
+\l: extra argument "|" ignored
+\l: extra argument "libc" ignored
+\l: extra argument "|" ignored
+\l: extra argument "en_US.UTF-8" ignored
+\l: extra argument "|" ignored
+\l: extra argument "en_US.UTF-8" ignored
+\l: extra argument "|" ignored
+\l: extra argument "|" ignored
+\l: extra argument "|" ignored
+\l: extra argument "=c/postgres" ignored
+\l: extra argument "+" ignored
+\l: extra argument "|" ignored
+\l: extra argument "|" ignored
+\l: extra argument "|" ignored
+\l: extra argument "|" ignored
+\l: extra argument "|" ignored
+\l: extra argument "|" ignored
+\l: extra argument "|" ignored
+\l: extra argument "|" ignored
+\l: extra argument "postgres=CTc/postgres" ignored
+\l: extra argument "(4" ignored
+\l: extra argument "rows)" ignored
+\l: extra argument "postgres=#" ignored
+     List of roles
+ Role name | Attributes 
+-----------+------------
+
+\du: extra argument "of" ignored
+\du: extra argument "roles" ignored
+\du: extra argument "Role" ignored
+\du: extra argument "name" ignored
+\du: extra argument "|" ignored
+\du: extra argument "Attributes" ignored
+\du: extra argument "-----------+------------------------------------------------------------" ignored
+\du: extra argument "postgres" ignored
+\du: extra argument "|" ignored
+\du: extra argument "Superuser," ignored
+\du: extra argument "Create" ignored
+\du: extra argument "role," ignored
+\du: extra argument "Create" ignored
+\du: extra argument "DB," ignored
+\du: extra argument "Replication," ignored
+\du: extra argument "Bypass" ignored
+\du: extra argument "RLS" ignored
+\du: extra argument "sonaruser" ignored
+\du: extra argument "|" ignored
+\du: extra argument "postgres=#" ignored
+You are connected to database "postgres" as user "postgres" via socket in "/var/run/postgresql" at port "5432".
+postgres-# GRANT ALL PRIVILEGES ON DATABASE sonarqube to sonaruser;
+ERROR:  syntax error at or near "postgres"
+LINE 1: postgres=# 
+        ^
+postgres=# 
+
