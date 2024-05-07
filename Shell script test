@@ -2,18 +2,11 @@
 
 # Define the directory path
 directory="/opt/supportfirst/apiservice/logs"
+directory="/opt/supportfirst/apiservice/logs"
 
-# Define the retention period in days (modify as needed)
-retention_days=30
-
-# Get the date one month ago
-past_date=$(date -d "-${retention_days} days" "+%Y-%m-%d")
-
-# Construct the filename pattern (assuming consistent naming)
-filename_pattern="console_*.log"
-
-# Find and delete files older than the retention period
-find "$directory" -type f -name "$filename_pattern" -mtime +"$retention_days" -delete
-
-# Informative message
-echo "Log files older than $retention_days days have been deleted from $directory."
+# Specify the filename pattern
+filename="app_$(date -d "1 month ago" "+%Y_%m_%d").log"
+filename1="app_$(date -d "1 month ago" "+%Y_%m_%d").log"
+# Delete the file
+rm -f "$directory/$filename"
+rm -f "$directory/$filename1"
