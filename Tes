@@ -8,3 +8,12 @@ filename="console_$(date -d "1 month ago" "+%Y_%m_%d").log"
 
 # Delete the file
 rm -f "$directory/$filename"
+
+root@sf-dev1:/opt/supportfirst/apiservice/logs# sh -x time.sh
++ directory=/opt/supportfirst/apiservice/logs
++ date -d 1 month ago +%Y_%m_%d
++ filename=console_2024_04_07.log
++ rm -f /opt/supportfirst/apiservice/logs/console_2024_04_07.log
+root@sf-dev1:/opt/supportfirst/apiservice/logs# 
+
+how to delete 01/07/2024 file 
