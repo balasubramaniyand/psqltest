@@ -1,0 +1,27 @@
+balasubramaniyand@CHNIOPEXL5097:~$ sudo ./mail.py
+./mail.py: 1: import: not found
+from: too many arguments
+./mail.py: 4: Syntax error: "(" unexpected
+balasubramaniyand@CHNIOPEXL5097:~$ sudo vi mail.py 
+balasubramaniyand@CHNIOPEXL5097:~$ sudo ./mail.py
+./mail.py: 1: import: not found
+from: too many arguments
+./mail.py: 4: Syntax error: "(" unexpected
+balasubramaniyand@CHNIOPEXL5097:~$ cat mail.py 
+import smtplib
+from email.message import EmailMessage
+
+def send_email(subject, body, to_email):
+    msg = EmailMessage()
+    msg.set_content(body)
+    msg['Subject'] = subject
+    msg['From'] = 'supporfirst_dev@iopex.com',
+    msg['To'] = 'balasubramaniyan.d@iopex.com',
+
+    with smtplib.SMTP('supporfirst_dev@iopex.com', 587) as smtp:
+        smtp.login('supporfirst_dev@iopex.com', 'P@$$word@098')
+        smtp.send_message(msg)
+
+# Call the function to send an email
+send_email("Hello", "This is a test email.", "recipient@balasubramaniyan.d@iopex.com")
+balasubramaniyand@CHNIOPEXL5097:~$ 
