@@ -1,0 +1,21 @@
+import smtplib
+from email.message import EmailMessage
+
+def send_email(subject, body, to_email):
+    msg = EmailMessage()
+    msg.set_content(body)
+    msg['Subject'] = subject
+    msg['From'] = 'supporfirst_dev@iopex.com'
+    msg['To'] = to_email  # Use the provided to_email parameter
+
+    try:
+        with smtplib.SMTP('smtp.iopex.com', 587) as smtp:
+            smtp.starttls()  # Enable encryption
+            smtp.login('supporfirst_dev@iopex.com', 'P@$$word@098')  # Consider using environment variables or a secure way to store password
+            smtp.send_message(msg)
+        print("Email sent successfully.")
+    except Exception as e:
+        print(f"Failed to send email. Error: {e}")
+
+# Call the function to send an email
+send_email("Hello", "This is a test email.", "balasubramaniyan.d@iopex.com")
