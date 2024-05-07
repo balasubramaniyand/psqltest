@@ -1,0 +1,16 @@
+import smtplib
+from email.message import EmailMessage
+
+def send_email(subject, body, to_email):
+    msg = EmailMessage()
+    msg.set_content(body)
+    msg['Subject'] = subject
+    msg['From'] = 'supporfirst_dev@iopex.com'  # Remove the trailing comma
+    msg['To'] = 'balasubramaniyan.d@iopex.com'
+
+    with smtplib.SMTP('supporfirst_dev@iopex.com', 587) as smtp:
+        smtp.login('supporfirst_dev@iopex.com', 'P@$$word@098')  # Consider using environment variables or a secure way to store password
+        smtp.send_message(msg)
+
+# Call the function to send an email
+send_email("Hello", "This is a test email.", "recipient@balasubramaniyan.d@iopex.com")
