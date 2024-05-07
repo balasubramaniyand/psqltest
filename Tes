@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Define the directory path
+directory="/opt/supportfirst/apiservice/logs"
+
+# Specify the filename pattern
+filename="console_$(date -d "1 month ago" "+%Y_%m_%d").log"
+
+# Delete the file
+rm -f "$directory/$filename"
