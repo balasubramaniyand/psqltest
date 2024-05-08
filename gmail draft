@@ -1,0 +1,13 @@
+Hi Team,
+
+I am working in Supportfirst  Deployment Automation. I able to intergate jenkins with pexgit using provided credentials.
+I facing the below issue when tried to intergrate with APIs. may the reason i am trying to  store the jenkins api credentials in pexgit its not allowming for the store the credentails that time getting error "Url is blocked: Requests to the local network are not allowed" this for the pexgit server side use 
+
+
+
+Hi Team,
+
+I am working at SupportFirst Deployment Automation. I was able to intergate Jenkins with Pexgit using the provided credentials.
+I faced the below issue when trying to integrate with APIs. Maybe the reason I am trying to store the Jenkins API credentials in Pexgit is that it is not allowing me to store the credentials, resulting in an error "Url is blocked: Requests to the local network are not allowed." This is for Pexgit server-side use. 
+
+This API setup is done. First, support is automated. for the deployment
