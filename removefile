@@ -1,0 +1,13 @@
+root@sf-dev1:/opt/supportfirst/sf_scripts# cat log.sh
+#!/bin/bash
+
+# Define the directory path
+directory="/opt/supportfirst/apiservice/logs"
+
+# Specify the filename pattern
+filename="app_$(date -d "1 month ago" "+%Y_%m_%d").log"
+filename1="console_$(date -d "1 month ago" "+%Y_%m_%d").log"  
+# Delete the file
+rm -f "$directory/$filename"
+rm -f "$directory/$filename1"
+root@sf-dev1:/opt/supportfirst/sf_scripts# 
