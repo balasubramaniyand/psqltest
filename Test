@@ -3,11 +3,13 @@
 # Check if port 9000 is not running
 if ! netstat -tuln | grep ":9000" > /dev/null; then
     SUBJECT="Port 9000 is not running"
-    TO="balasubramaniyan.d@iopex.gmail.com"
+    FROM="sf-mail@iopex.com"
+    TO="balasubramaniyan.d@iopex.com"
+    CC="rohith.venkatesh@iopex.com","pandian.a@iopex.com"
     BODY="Port 9000 is not running. Please check."
 
     # Send email notification
-    echo "$BODY" | mail -s "$SUBJECT" "$TO"
+    echo "$BODY" | mail -s "$SUBJECT" -r "$FROM" "$TO"
 
     # Check if email was sent successfully
     if [ $? -eq 0 ]; then
@@ -16,3 +18,4 @@ if ! netstat -tuln | grep ":9000" > /dev/null; then
         echo "Failed to send email notification."
     fi
 fi
+root@testgit:~/test# 
