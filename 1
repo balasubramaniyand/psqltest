@@ -24,7 +24,8 @@ pipeline {
             script {
                 if (currentBuild.result == 'FAILURE') {
                     mail to: 'balasubramaniyan.d@iopex.com',
-                    cc :'rohith.venkatesh@iopex.com',
+                    cc :'rohith.venkatesh@iopex.com'
+meena.velkumar@iopex.com,
                     subject: 'IMAP WAR NOT RUNNING',
                     body: "Hello Team,\n\nImap war file is not running on the server. Please check the server."
                 }
