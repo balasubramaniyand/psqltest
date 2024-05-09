@@ -1,0 +1,15 @@
+root@testgit:~/test# vi bala.sh 
+root@testgit:~/test# sh -x bala.sh 
++ netstat+  -tuln
+grep :9000
++ [ 1 -ne 0 ]
++ SUBJECT=Port 9000 is not running
++ TO=balasubramaniyan.d@iopex.gmail.com
++ BODY=Port 9000 is not running. Please check.
++ echo Port 9000 is not running. Please check.
++ mail -s Port 9000 is not running balasubramaniyan.d@iopex.gmail.com
+bala.sh: 11: mail: not found
++ [ 127 -eq 0 ]
++ echo Failed to send email notification.
+Failed to send email notification.
+root@testgit:~/test# 
