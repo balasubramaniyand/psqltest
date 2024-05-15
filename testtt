@@ -1,0 +1,24 @@
+root@supportfirst:/opt/supportfirst# ls
+apiservice  imapservice  kafkaservice  scripts
+root@supportfirst:/opt/supportfirst# cd scripts/
+root@supportfirst:/opt/supportfirst/scripts# ls
+clearlog.sh  imapstatus.sh
+root@supportfirst:/opt/supportfirst/scripts# sh -x imapstatus.sh 
++ netstat -tuln
++ grep :8090
++ SUBJECT=Alert !! IMAP Service is down
++ FROM=supporfirst_dev@iopex.com
++ TO=balasubramaniyan.d@iopex.com
++ CC=rohith.venkatesh@iopex.com, meena.velkumar@iopex.com
++ BODY=Hello Team,
+
+The IMAP service is not running on the server. Please restart the service.
+
+
+Thankyou
++ /usr/sbin/sendmail -t -i -f supporfirst_dev@iopex.com
+sendmail: fatal: bad string length 0 < 1: setgid_group = 
++ [ 75 -eq 0 ]
++ echo Failed to send email notification.
+Failed to send email notification.
+root@supportfirst:/opt/supportfirst/scripts#
